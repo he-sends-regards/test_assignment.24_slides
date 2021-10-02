@@ -1,46 +1,148 @@
-# Getting Started with Create React App
+## Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Code Exam! 👾
 
-## Available Scripts
+In the following 2 hours you'll be evaluated for your coding skills in solving a three-step challenge coming up with solution of different cases. After completing a task, take the time to refactor your code so it will be clean & organized before moving on.
 
-In the project directory, you can run:
+### Getting Started
 
-### `npm start`
+You are able to create a local project to upload it to the repository or use JavaScript / React online sandbox. It's up to you.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+We are interest of your own resolving for the next cases:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Create custom hook of countdown timer. An abstract type of the hook is:
 
-### `npm test`
+```ts
+type Time = number;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+type UseTimer = (initialTimeSeconds: Time) => Time;
+```
 
-### `npm run build`
+2. Count `value` amount of the next interface:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+const children = {
+  value: 1,
+  children: [
+    {
+      value: 0,
+      children: [{ value: 1 }, { value: 2, children: [{ value: 3 }] }],
+    },
+    { value: 4 },
+  ],
+};
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Expected result is:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+const children = { ... };
 
-### `npm run eject`
+function yourImplementation(...) { ... };
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+yourImplementation(children);
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Create a markup for the next interface:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
+[
+  {
+    id: 1,
+    user: {
+      name: "Implement Customer",
+      hasCredits: false,
+      suspended: true,
+    },
+    slides: 11,
+    status: "Open",
+    revisions: 0,
+    price: "$0",
+    manager: "Project manager",
+    team: "-",
+    deadline: "2021-09-11T00:00:00.000000Z",
+    subscribed: true,
+  },
+  {
+    id: 2,
+    user: {
+      name: "Implement Customer",
+      hasCredits: true,
+      suspended: false,
+    },
+    slides: 22,
+    status: "New",
+    revisions: 0,
+    price: "$222",
+    manager: "Project manager",
+    team: "Alpaca",
+    deadline: "2021-09-05T00:00:00.000000Z",
+    subscribed: false,
+  },
+  {
+    id: 3,
+    user: {
+      name: "Implement Customer",
+      hasCredits: false,
+      suspended: true,
+    },
+    slides: 33,
+    status: "First draft in progress",
+    revisions: 0,
+    price: "$1000",
+    manager: "Project manager",
+    team: "Smash",
+    deadline: "2021-08-30T00:00:00.000000Z",
+    subscribed: false,
+  },
+  {
+    id: 4,
+    user: {
+      name: "Implement Customer",
+      hasCredits: false,
+      suspended: false,
+    },
+    slides: 111,
+    status: "Approved",
+    revisions: 0,
+    price: "$800",
+    manager: "Project manager",
+    team: "Alpaca",
+    deadline: "2021-09-22T00:00:00.000000Z",
+    subscribed: true,
+  },
+  {
+    id: 5,
+    user: {
+      name: "Implement Customer",
+      hasCredits: true,
+      suspended: false,
+    },
+    slides: 222,
+    status: "First draft in progress",
+    revisions: 0,
+    price: "$400",
+    manager: "Project manager",
+    team: "Alpaca",
+    deadline: "2021-08-22T00:00:00.000000Z",
+    subscribed: false,
+  },
+];
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- If user is suspended ("Customer" column) add highlight color to the markup;
+- If user has credits add highlight background color to a row;
+- If order is subscribed add another highlight background color to row;
+- If deadline is expired ("Deadline" column) add a highlight color;
+- Styles are optional.
 
-## Learn More
+Example:  
+![alt text](24bdc42e0bc72d846c06f1d95a3c9e71.jpeg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Notice
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- If at any point something is unclear you may contact your interviewer;
+- Let us know if the tasks implementation took more time than 2 hours;
+- Follow best practices as much as possible, focus on the code quality;
+- Adding styles to the last task is optional, but it is a valuable bonus;
+- Good luck! ✌️
