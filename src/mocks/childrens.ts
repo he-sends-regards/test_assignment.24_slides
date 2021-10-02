@@ -1,4 +1,9 @@
-export const childrens = {
+export type ChildrenType = {
+  value: number;
+  children?: ChildrenType[];
+};
+
+export const childrens: ChildrenType = {
   value: 1,
   children: [
     {
